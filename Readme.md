@@ -7,9 +7,9 @@
 3. Run the migrations:
   - `docker compose up --build`
   - Open a new tab in your terminal, then type `docker ps`. The result should be something like this:
-      CONTAINER ID   IMAGE             COMMAND                  CREATED          STATUS          PORTS                               NAMES
-      18ce7687a5a9   namastecorp-app   "docker-entrypoint.s…"   27 seconds ago   Up 26 seconds   0.0.0.0:3000->3000/tcp              namastecorp-app-1
-      e23e5c7ca6c5   mysql:8           "docker-entrypoint.s…"   27 seconds ago   Up 26 seconds   33060/tcp, 0.0.0.0:3308->3306/tcp   namastecorp-mysql-1
+      + CONTAINER ID   IMAGE             COMMAND                  CREATED          STATUS          PORTS                               NAMES
+      + 18ce7687a5a9   namastecorp-app   "docker-entrypoint.s…"   27 seconds ago   Up 26 seconds   0.0.0.0:3000->3000/tcp              namastecorp-app-1
+      + e23e5c7ca6c5   mysql:8           "docker-entrypoint.s…"   27 seconds ago   Up 26 seconds   33060/tcp, 0.0.0.0:3308->3306/tcp   namastecorp-mysql-1
   - Then run `docker exec -it 18ce7687a5a9 /bin/sh`, with `18ce7687a5a9` is the CONTAINER ID of `namastecorp-app` image
   - Run `yarn migration:run`
 4. Boot the server: `yarn dev`
