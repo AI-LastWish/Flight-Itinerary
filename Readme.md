@@ -14,6 +14,7 @@
   - Run `yarn migration:run`
 4. Boot the server: `yarn dev`
 5. Access the REST api on the url `http://localhost:3000` or the port you specified in `.env`
+6. Import `/postman/namastecorp.postman_collection.json` to Postman to test the APIs
 
 ## Tools and Technologies Used
 - NodeJS
