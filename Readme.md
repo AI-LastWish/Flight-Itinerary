@@ -56,6 +56,9 @@ To revert the last executed migration, run the following command: `yarn migratio
 - `PUT /itinerary/:id`: Update a itinerary by ID 
 - `DELETE /itinerary/:id`: Delete a itinerary by ID 
 
+## Optimization to handle either big sets of data or a big amount of concurrent requests:
+Already included `express-rate-limit` middleware to limit the number of requests from a client within a specified time window.
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

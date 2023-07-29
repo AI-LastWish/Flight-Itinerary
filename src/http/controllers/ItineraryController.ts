@@ -64,11 +64,11 @@ export class ItineraryController {
       Object.assign(dto, itineraryData);
   
       await validateOrReject(dto);
-  
-      const repo = AppDataSource.getRepository(Itinerary);
-      const itinerary = repo.create(itineraryData);
-      await repo.save(itinerary);
     }
+
+    const repo = AppDataSource.getRepository(Itinerary);
+    const itinerary = repo.create(sortedItineraryList);
+    await repo.save(itinerary);
 
     return ResponseUtil.sendResponse(res, "Successfully created new itinerary list", sortedItineraryList, 200);
   }
