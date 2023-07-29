@@ -4,7 +4,8 @@
 
 1. Clone the repository
 2. Install the dependencies: `yarn install` or `yarn`
-3. Run the migrations:
+3. Copy the `.env.example` file to `.env` and update the necessary variables: `cp .env.example .env`
+4. Run the migrations:
   - `docker compose up --build`
   - Open a new tab in your terminal, then type `docker ps`. The result should be something like this:
       + CONTAINER ID   IMAGE             COMMAND                  CREATED          STATUS          PORTS                               NAMES
@@ -12,9 +13,10 @@
       + e23e5c7ca6c5   mysql:8           "docker-entrypoint.s…"   27 seconds ago   Up 26 seconds   33060/tcp, 0.0.0.0:3308->3306/tcp   namastecorp-mysql-1
   - Then run `docker exec -it 18ce7687a5a9 /bin/sh`, with `18ce7687a5a9` is the CONTAINER ID of `namastecorp-app` image
   - Run `yarn migration:run`
-4. Boot the server: `yarn dev`
-5. Access the REST api on the url `http://localhost:3000` or the port you specified in `.env`
-6. Import `/postman/namastecorp.postman_collection.json` to Postman to test the APIs
+5. Boot the server: `yarn dev`
+6. Access the REST api on the url `http://localhost:3000` or the port you specified in `.env`
+7. Import `/postman/namastecorp.postman_collection.json` to Postman to test the APIs
+8. Run unit test: `yarn test`
 
 ## Tools and Technologies Used
 - NodeJS
